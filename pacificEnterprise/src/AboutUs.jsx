@@ -1,5 +1,6 @@
 import './App.css'
 import "./index.css";
+import Card from './components/Card.jsx';
 
 function AboutUs() {
 
@@ -15,6 +16,7 @@ function AboutUs() {
               <span className='block mt-10'> cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </span> <br />
               No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la
               </p>
+              <Card/>
           </div>
           <div className='flex items-center justify-center gap-20 m-2'>
             <div className='flex-col m-2'>
