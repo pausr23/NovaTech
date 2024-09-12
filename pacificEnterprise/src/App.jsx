@@ -3,15 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import AboutUs from './AboutUs';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
-
+export function App() {
 
   return (
     <>
-      <div>
-       <AboutUs/> 
-      </div>
+      return (
+      <Router>
+        <Routes>
+          <Route path="/about-us" element={<AboutUs />} /> 
+        </Routes>
+      </Router>
+      );
     </>
   )
 }
