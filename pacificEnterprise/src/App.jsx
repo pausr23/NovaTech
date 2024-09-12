@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import AboutUs from './AboutUs';
+import Menu from  './Menu';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export function App() {
@@ -13,9 +14,10 @@ export function App() {
         <Router>
           <Routes>
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/menu" element={<Menu />}/>
           </Routes>
         </Router>
-        );
+     
       </div>
     </>
   )
