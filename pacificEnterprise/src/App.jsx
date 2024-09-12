@@ -9,13 +9,14 @@ export function App() {
 
   return (
     <>
-      return (
-      <Router>
-        <Routes>
-          <Route path="/about-us" element={<AboutUs />} /> 
-        </Routes>
-      </Router>
-      );
+      <div className='m-[5.556vw]'>
+        <Router>
+          <Routes>
+            <Route path="/about-us" element={<AboutUs />} />
+          </Routes>
+        </Router>
+        );
+      </div>
     </>
   )
 }
