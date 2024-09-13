@@ -1,6 +1,7 @@
 import './App.css'
 import "./index.css";
 import Card from './components/Card.jsx';
+import Footer from './components/Footer.jsx';
 
 
 function Menu() {
@@ -26,7 +27,7 @@ function Menu() {
 </div>
 
 </div>
-
+<Footer />
     </>
   )
 }
