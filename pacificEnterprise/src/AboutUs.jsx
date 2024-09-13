@@ -1,13 +1,14 @@
 import './App.css'
 import "./index.css";
 import Card from './components/Card.jsx';
+import Footer from './components/Footer.jsx';
 
 function AboutUs() {
 
 
   return (
     <>
-      <div classname='bg-[#16161A] flex items-center justify-center'>
+      <div classname='bg-[#16161A] flex'>
         <h1 className='text-4xl font-bold text-white text-center p-4 mb-14 mt-14'>About Us</h1>
         <div className='flex items-center justify-center gap-20 m-2'>
           <img src='./src/assets/img/Rectangleferri.png' className='w-[591px] h-[656.25px]' alt="Ferri" />
@@ -16,7 +17,6 @@ function AboutUs() {
             <span className='block mt-10'> cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </span> <br />
             No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la
           </p>
-          <Card />
         </div>
         <div className='flex items-center justify-center gap-20 m-2'>
           <div className='flex-col m-2'>
@@ -37,8 +37,9 @@ function AboutUs() {
               Tambor IV </p>
           </div>
           <img src='./src/assets/img/barco.png' className='w-[591px] h-[656.25px]' alt="Ferri" />
-        </div>
+        </div>        
       </div>
+      <Footer />
     </>
   )
 }
