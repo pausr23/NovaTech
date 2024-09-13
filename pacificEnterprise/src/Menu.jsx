@@ -1,7 +1,7 @@
 import './App.css'
 import "./index.css";
 import Card from './components/Card.jsx';
-import { TabView, TabPanel } from 'primereact/tabview';    
+
 
 function Menu() {
 
