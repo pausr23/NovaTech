@@ -1,18 +1,15 @@
-
-
 import logo from '../assets/img/logo.svg';
 import { Link } from 'react-router-dom';
 import hero from '../assets/img/hero.png';
-import flechaback from '../assets/img/backto.png';
-import flechago from '../assets/img/goto.png';
-import gallopinto from '../assets/img/gallopinto.svg';
+import '../index.css'; 
+
 export function Nav() {
     return (
         <>
             <div>
-                <div className='ml-[4%] flex flex-row h-full '>
-                    <div className='mt-[2%] flex flex-col w-[35%] h-[20%] items-start '>
-                        <div className='h-[20%] flex flex-row'>
+                <div className='ml-[4%] grid grid-cols-2 h-full '>
+                    <div className='mt-[2%] grid  w-[35%] h-[20%] items-start '>
+                        <div className='h-[20%] grid grid-cols-2'>
                             <img src={logo} alt="logo" />
                             <ul className=' gap- flex flex-row font-bold gap-[2vw] ml-auto my-auto '>
                                 <li><Link to="/menu">Menu</Link></li>
@@ -33,20 +30,13 @@ export function Nav() {
                                 <li>voyage</li>
                             </ul>
 
-                            <button className=' mt-[5vh] text-4xl bg-[#CDA0CB] py-[1vh] px-[5vw] rounded-[2vw]'>Menu</button>
+                            <button className=' mt-[5vh] text-3xl bg-[#CDA0CB] py-[1vh] px-[5vw] rounded-[2vw]'>Menu</button>
 
                         </div>
 
-
-
                     </div>
 
-                    <div className='w-[65%] object-cover'>
-                        <img className='object-cover ' src={hero} alt="hero img barco" />
-                    </div>
-
-
-
+                        <img className='w-full' src={hero} alt="hero img barco" />
                 </div>
 
                
