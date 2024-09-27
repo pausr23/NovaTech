@@ -35,9 +35,9 @@ function Menu() {
 
   return (
     <>
-      <h1 className='text-center'>Menu</h1>
-      <div className='mx-[5%]'>
-        <div className='flex justify-center mb-4'>
+      <h1 className='text-center text-4xl'>Menu</h1>
+      <div className='mx-[5%] my-[2%]'>
+        <div className='flex justify-center mb-4 gap-x-[1%]'>
           {categories.map(category => (
             <CategoryButton
               key={category.id}
