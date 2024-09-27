@@ -8,7 +8,7 @@ import CategoryButton from './components/CategoryButton.jsx';
 function Menu() {
   const [dishes, setDishes] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+  const [selectedCategoryId, setSelectedCategoryId] = useState(1);
 
   useEffect(() => {
     Promise.all([
@@ -47,10 +47,11 @@ function Menu() {
             />
           ))}
         </div>
+        <div>
         {filteredSubcategories.map(subcategory => (
-          <div className='my-[10rem]' key={subcategory.id}>
-            <h1>{subcategory.name}</h1>
-            <div className='grid grid-cols-3 gap-x-[2%] gap-y-[5%]'>
+          <div className='' key={subcategory.id}>
+            <h1 className='flex justify-center text-4xl'>{subcategory.name}</h1>
+            <div className='grid grid-cols-3 gap-x-[2%] gap-y-[5%] my-[60rem]'>
               {dishes
                 .filter(dish => dish.subcategory_id === subcategory.id)
                 .map(dish => (
@@ -65,6 +66,7 @@ function Menu() {
             </div>
           </div>
         ))}
+        </div>
       </div>
       <Footer />
     </>
