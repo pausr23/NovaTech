@@ -13,7 +13,7 @@ export const useSwiperConfig = () => {
         navigation: true, 
         modules: [Pagination, Navigation], 
         breakpoints: {
-            385: {
+            300: {
                 slidesPerView: 1, 
             },
             768: {
