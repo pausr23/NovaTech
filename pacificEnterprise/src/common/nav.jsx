@@ -2,6 +2,7 @@ import logo from '../assets/img/logo.svg';
 import { Link } from 'react-router-dom';
 import hero from '../assets/img/hero.png';
 import '../index.css'; 
+import Menu from '../Menu';
 
 export function Nav() {
     return (
@@ -11,9 +12,9 @@ export function Nav() {
                 <div className='h-[20%] grid grid-cols-2 my-2'>
                     <img src={logo} alt="logo" className='w-full ' />
                     <ul className='flex flex-row font-bold gap-[2vw] text-base xxs:text-[0.55rem] md:text-[0.813rem] ml-auto my-auto '>
-                        <li><Link to="/menu">Menu</Link></li>
-                        <li><Link to="/about-us">About us</Link></li> 
                         <li><Link to="/">Home</Link></li>
+                        <li><Link to="/menu">Menu</Link></li>
+                        <li><Link to="/about-us">About us</Link></li>                         
                     </ul>
                 </div>
 
@@ -29,7 +30,7 @@ export function Nav() {
                         <li>voyage</li>
                     </ul>
 
-                    <button className=' my-[5vh] xxs:text-xl text-3xl bg-[#CDA0CB] py-[1vh] px-[5vw] rounded-[2vw]'>Menu</button>
+                    <button className=' my-[5vh] xxs:text-xl text-3xl bg-[#CDA0CB] py-[1vh] px-[5vw] rounded-[2vw]'><Link to="/menu">Menu</Link></button>
 
                 </div>
 
