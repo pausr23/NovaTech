@@ -3,7 +3,7 @@ import "../index.css";
 
 export function Footer() {
     return (
-        <>
+        
         <div className='bg-[#323035] w-full h-auto py-10 mt-16'>
         <div className='flex justify-center p-6'>
             <img src="./src/assets/img/logo.svg" alt="logo" className="w-42 h-auto" />
@@ -40,7 +40,7 @@ export function Footer() {
             </div>
         </div>
     </div>
-    </>
+
     );
 }
 
