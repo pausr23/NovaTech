@@ -1,81 +1,104 @@
-import React, { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { useSwiperConfig } from './useSwiperConfig';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import './index.css'; 
-import flechaback from './assets/img/backto.png';
-import flechago from './assets/img/goto.png';
-import { LandingCards } from './components/LandingCards';
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useSwiperConfig } from "./useSwiperConfig";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./index.css";
+import flechaback from "./assets/img/backto.png";
+import flechago from "./assets/img/goto.png";
+import { LandingCards } from "./components/LandingCards";
 
 export function Landing() {
-    const swiperRef = useRef(null); 
+  const swiperRef = useRef(null);
 
-    const swiperConfig = useSwiperConfig();
-    
+  const swiperConfig = useSwiperConfig();
 
-    const handlePrev = () => {
-        if (swiperRef.current) {
-            swiperRef.current.swiper.slidePrev();
-        }
-    };
+  const handlePrev = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
 
-    const handleNext = () => {
-        if (swiperRef.current) {
-            swiperRef.current.swiper.slideNext(); 
-        }
-    };
+  const handleNext = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
 
-    return (
-        <div className='relative 2xl:w-[80%] xxs:w-[90%] mx-auto my-[3%] bg-[#CDA0CB] h-[70%] mb-10  rounded-2xl'>
-            <div className='flex items-center h-full'>
-                <div className='w-[5%] flex items-center justify-center'>
-                    <img src={flechaback} alt="flecha back" className='custom-button-prev w-[70%] xxs:w-[100%] ml-10' onClick={handlePrev}/>
-                </div>
+  return (
+    <div className="relative 2xl:w-[80%] xxs:w-[90%] mx-auto my-[3%] bg-[#CDA0CB] h-[70%] mb-10  rounded-2xl">
+      <div className="flex items-center h-full">
+        <button
+          className="w-[5%] flex items-center justify-center"
+          onClick={handlePrev}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              handlePrev();
+            }
+          }}
+        >
+          <img
+            src={flechaback}
+            alt="flecha back"
+            className="custom-button-prev w-[70%] xxs:w-[100%] ml-10"
+          />
+        </button>
 
-                <div className='w-[80%] h-[50%] mx-auto  '>
-                    <Swiper
-                        {...swiperConfig}
-                        ref={swiperRef} 
-                    >
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <LandingCards />
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
-
-                <div className='w-[5%] flex items-center justify-center'>
-                    <img src={flechago} alt="flecha go" className='custom-button-next w-[80%] xxs:w-[100%] mr-10' onClick={handleNext}/>
-                </div>
-            </div>
+        <div className="w-[80%] h-[50%] mx-auto  ">
+          <Swiper {...swiperConfig} ref={swiperRef}>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+            <SwiperSlide>
+              <LandingCards />
+            </SwiperSlide>
+          </Swiper>
         </div>
-    );
+
+        <button
+          className="w-[5%] flex items-center justify-center "
+          onClick={handleNext}
+          tabIndex="0"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              handleNext();
+            }
+          }}
+        >
+          <img
+            src={flechago}
+            alt="flecha go"
+            className="custom-button-next w-[80%] xxs:w-[100%] mr-10"
+          />
+        </button>
+      </div>
+    </div>
+  );
 }
