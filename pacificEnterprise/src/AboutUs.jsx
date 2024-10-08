@@ -1,6 +1,5 @@
 import './App.css'
 import "./index.css";
-import Card from './components/Card.jsx';
 import Footer from './components/Footer.jsx';
 
 function AboutUs() {
@@ -14,11 +13,13 @@ function AboutUs() {
           <p className='text-white text-lg max-w-md leading-relaxed'>
             Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
             Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.
-            <span className='block mt-10'>
-              Cuando un impresor desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+            <span className='block mr-4'>
+             Cuando un impresor desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
             </span>
-            No sólo sobrevivió 500 años, sino que también ingresó como texto de relleno en documentos electrónicos.
-          </p>
+              <span className='inline-block'>
+             Otro texto en el mismo nivel, con espaciado entre ambos.
+            </span>
+ </p>
         </div>
 
         <div className='flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 m-2 mt-6'>
