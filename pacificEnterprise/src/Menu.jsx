@@ -25,9 +25,7 @@ function Menu() {
   const handleCategoryClick = (id) => {
     console.log(`Selected Category ID: ${id}`);
     setSelectedCategoryId(id);
-    // Aquí puedes agregar la lógica para filtrar los platos por categoría
   };
-
   const filteredCategories = categories.filter(category => category.id === selectedCategoryId);
   const filteredSubcategories = filteredCategories.length > 0 ? filteredCategories[0].subcategories : [];
 
@@ -37,7 +35,7 @@ function Menu() {
     <>
       <h1 className='text-center text-4xl'>Menu</h1>
       <div className='mx-[5%] my-[2%]'>
-        <div className='flex justify-center mb-4 gap-x-[1%]'>
+        <div className='flex justify-center mb-[10rem] gap-x-[1%]'>
           {categories.map(category => (
             <CategoryButton
               key={category.id}
@@ -48,24 +46,26 @@ function Menu() {
           ))}
         </div>
         <div>
-        {filteredSubcategories.map(subcategory => (
-          <div className='' key={subcategory.id}>
-            <h1 className='flex justify-center text-4xl'>{subcategory.name}</h1>
-            <div className='grid grid-cols-3 gap-x-[2%] gap-y-[5%] my-[60rem]'>
-              {dishes
-                .filter(dish => dish.subcategory_id === subcategory.id)
-                .map(dish => (
-                  <Card 
-                    key={dish.id} 
-                    image={dish.image} 
-                    title={dish.title} 
-                    price={dish.dish_price} 
-                    description={dish.description} 
-                  />
-                ))}
+          {filteredSubcategories.map(subcategory => (
+            <div className='' key={subcategory.id}>
+              <div className='flex justify-center items-center'>
+                <h1 className='font-bold text-white text-3xl'>{subcategory.name}</h1>
+              </div>
+              <div className='flex overflow-x-scroll xl:overflow-visible gap-[1rem] w-[calc(100vw-10%)] xl:grid grid-rows-1 xl:grid-cols-3 lg:gap-[3rem] my-[5rem] xl:my-[10rem]'>
+                {dishes
+                  .filter(dish => dish.subcategory_id === subcategory.id)
+                  .map(dish => (
+                    <Card
+                      key={dish.id}
+                      image={dish.image}
+                      title={dish.title}
+                      price={dish.dish_price}
+                      description={dish.description}
+                    />
+                  ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
       <Footer />
