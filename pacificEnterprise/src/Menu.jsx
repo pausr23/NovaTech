@@ -12,8 +12,8 @@ function Menu() {
 
   useEffect(() => {
     Promise.all([
-      fetch('http://pacificenterprise-produccion.test/api/dishes/all').then(response => response.json()),
-      fetch('http://pacificenterprise-produccion.test/api/categories').then(response => response.json())
+      fetch('http://pacificenterprise.test-produccion/api/dishes/all').then(response => response.json()),
+      fetch('http://pacificenterprise.test-produccion/api/categories').then(response => response.json())
     ])
       .then(([dishesData, categoriesData]) => {
         setDishes(dishesData);
@@ -29,13 +29,11 @@ function Menu() {
   const filteredCategories = categories.filter(category => category.id === selectedCategoryId);
   const filteredSubcategories = filteredCategories.length > 0 ? filteredCategories[0].subcategories : [];
 
-
-
   return (
     <>
-      <h1 className='text-center text-4xl'>Menu</h1>
+      <h1 className='text-center text-5xl font-bold'>Menu</h1>
       <div className='mx-[5%] my-[2%]'>
-        <div className='flex justify-center mb-[10rem] gap-x-[1%]'>
+        <div className='flex justify-center mb-[8rem] gap-x-[1%]'>
           {categories.map(category => (
             <CategoryButton
               key={category.id}
@@ -45,11 +43,15 @@ function Menu() {
             />
           ))}
         </div>
-        <div>
+        <div> 
           {filteredSubcategories.map(subcategory => (
             <div className='' key={subcategory.id}>
-              <div className='flex justify-center items-center'>
-                <h1 className='font-bold text-white text-3xl'>{subcategory.name}</h1>
+              <div className='flex flex-col items-center'>
+                <hr className='w-[50%] h-[2px] bg-white mb-4' /> 
+                <h1 className='font-bold text-white text-3xl'>
+                  {subcategory.name}
+                </h1>
+                <hr className='w-[50%] h-[2px] bg-white mt-4' /> 
               </div>
               <div className='flex overflow-x-scroll xl:overflow-visible gap-[1rem] w-[calc(100vw-10%)] xl:grid grid-rows-1 xl:grid-cols-3 lg:gap-[3rem] my-[5rem] xl:my-[10rem]'>
                 {dishes
@@ -70,7 +72,7 @@ function Menu() {
       </div>
       <Footer />
     </>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

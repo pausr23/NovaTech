@@ -5,10 +5,10 @@
 
 
 body {
-  background-color: #16161A; /* Color de fondo */
-  margin: 0; /* Elimina el margen por defecto del body */
-  font-family: 'inter', sans-serif; /* Opcional: establecer una fuente */
-  color: #fff; /* Color de texto */
+  background-color: #16161A; 
+  margin: 0;
+  font-family: 'inter', sans-serif; 
+  color: #fff; 
 }
 
 .App {
