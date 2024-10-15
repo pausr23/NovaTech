@@ -4,73 +4,66 @@ import './index.css';
 import Card from './components/Card.jsx';
 import Footer from './components/Footer.jsx';
 import CategoryButton from './components/CategoryButton.jsx';
+import useFetchData from './hooks/useFetchData.js';
+import useCategorySelection from './hooks/showCategorySelection.js';
 
 function Menu() {
-  const [dishes, setDishes] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [selectedCategoryId, setSelectedCategoryId] = useState(1);
+  const { dishes, categories } = useFetchData(
+    'http://pacificenterprise-produccion.test/api/dishes/all',
+    'http://pacificenterprise-produccion.test/api/categories'
+  );
 
-  useEffect(() => {
-    Promise.all([
-      fetch('http://pacificenterprise-produccion.test/api/dishes/all').then(response => response.json()),
-      fetch('http://pacificenterprise-produccion.test/api/categories').then(response => response.json())
-    ])
-      .then(([dishesData, categoriesData]) => {
-        setDishes(dishesData);
-        setCategories(categoriesData);
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  const {
+    selectedCategoryId,
+    handleCategoryClick,
+    filteredCategories,
+    filteredSubcategories
+  } = useCategorySelection(categories);
 
-  const handleCategoryClick = (id) => {
-    console.log(`Selected Category ID: ${id}`);
-    setSelectedCategoryId(id);
-    // Aquí puedes agregar la lógica para filtrar los platos por categoría
-  };
-
-  const filteredCategories = categories.filter(category => category.id === selectedCategoryId);
-  const filteredSubcategories = filteredCategories.length > 0 ? filteredCategories[0].subcategories : [];
-
-
-
-  return (
-    <>
-      <h1 className='text-center text-4xl'>Menu</h1>
-      <div className='mx-[5%] my-[2%]'>
-        <div className='flex justify-center mb-4 gap-x-[1%]'>
-          {categories.map(category => (
-            <CategoryButton
-              key={category.id}
-              id={category.id}
-              name={category.name}
-              onCategoryClick={handleCategoryClick}
-            />
-          ))}
-        </div>
-        <div>
+return (
+  <>
+    <h1 className='text-center text-5xl font-bold'>Menu</h1>
+    <div className='mx-[5%] my-[2%]'>
+      <div className='flex justify-center mb-[8rem] gap-x-[1%]'>
+        {categories.map(category => (
+          <CategoryButton
+            key={category.id}
+            id={category.id}
+            name={category.name}
+            onCategoryClick={handleCategoryClick}
+          />
+        ))}
+      </div>
+      <div>
         {filteredSubcategories.map(subcategory => (
           <div className='' key={subcategory.id}>
-            <h1 className='flex justify-center text-4xl'>{subcategory.name}</h1>
-            <div className='grid grid-cols-3 gap-x-[2%] gap-y-[5%] my-[60rem]'>
+            <div className='flex flex-col items-center'>
+              <hr className='w-[50%] h-[2px] bg-white mb-4' />
+              <h1 className='font-bold text-white text-3xl'>
+                {subcategory.name}
+              </h1>
+              <hr className='w-[50%] h-[2px] bg-white mt-4' />
+            </div>
+            <div className='flex overflow-x-scroll xl:overflow-visible gap-[1rem] w-[calc(100vw-10%)] xl:grid grid-rows-1 xl:grid-cols-3 lg:gap-[3rem] my-[5rem] xl:my-[10rem]'>
               {dishes
                 .filter(dish => dish.subcategory_id === subcategory.id)
                 .map(dish => (
-                  <Card 
-                    key={dish.id} 
-                    image={dish.image} 
-                    title={dish.title} 
-                    price={dish.dish_price} 
-                    description={dish.description} 
+                  <Card
+                    key={dish.id}
+                    image={dish.image}
+                    title={dish.title}
+                    price={dish.dish_price}
+                    description={dish.description}
                   />
                 ))}
             </div>
           </div>
         ))}
-        </div>
       </div>
-      <Footer />
-    </>
-  )
+    </div>
+    <Footer />
+  </>
+);
 }
 
-export default Menu
+export default Menu;
