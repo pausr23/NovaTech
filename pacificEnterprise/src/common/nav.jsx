@@ -14,7 +14,8 @@ export function Nav() {
                     <ul className='flex flex-row font-bold gap-[2vw] text-base xxs:text-[0.55rem] md:text-[0.813rem] ml-auto my-auto '>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/menu">Menu</Link></li>
-                        <li><Link to="/about-us">About us</Link></li>                         
+                        <li><Link to="/about-us">About</Link></li>  
+                        <li><Link to="/events">Event</Link></li>                      
                     </ul>
                 </div>
 
