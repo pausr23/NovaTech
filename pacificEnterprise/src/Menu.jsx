@@ -52,7 +52,7 @@ return (
                     key={dish.id}
                     image={dish.image}
                     title={dish.title}
-                    price={dish.dish_price}
+                    price={dish.sale_price}
                     description={dish.description}
                   />
                 ))}
