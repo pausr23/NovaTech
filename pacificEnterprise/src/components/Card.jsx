@@ -18,7 +18,7 @@ export function Card({ image, title, price, description }) {
       </div>
       <div className="w-[50%] mx-[5%] overflow-hidden flex flex-col justify-center">
         <h1 className="mb-1 text-[.8rem] lg:text-xl overflow-hidden">{title}</h1>
-        <p className="mb-1 text-[.7rem] lg:text-lg overflow-hidden">${price}</p>
+        <p className="mb-1 text-[.7rem] lg:text-lg overflow-hidden">₡{price}</p>
         <p className="text-[.5rem] lg:text-base overflow-hidden">{truncateDescription(description)}</p> 
       </div>
     </div>
