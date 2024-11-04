@@ -12,7 +12,7 @@ export function Card({ image, title, price, description }) {
       <div className="w-[50%] h-full flex justify-center items-center bg-white rounded-full overflow-hidden">
         <img
           className="w-full h-full object-contain"
-          src={image}
+          src={image} 
           alt={title}
         />
       </div>

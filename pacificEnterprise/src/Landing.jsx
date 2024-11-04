@@ -8,7 +8,6 @@ import "./index.css";
 import flechaback from "./assets/img/backto.png";
 import flechago from "./assets/img/goto.png";
 import { LandingCards } from "./components/LandingCards";
-import { EventCarousel } from "./components/EventCarousel.jsx";
 
 const getRandomImages = (images, count) => {
   const shuffled = images.sort(() => 0.5 - Math.random());
@@ -55,7 +54,9 @@ export function Landing() {
   }, []);
 
   return (
-    <div className="relative 2xl:w-[80%] xxs:w-[90%] mx-auto my-[3%] bg-[#CDA0CB] h-[70%] mb-10 rounded-2xl">
+    <>
+    <h1 className="text-center text-5xl font-bold">Some of our <span className="text-[#CDA0CB]">menu</span></h1>
+    <div className="relative 2xl:w-[80%] xxs:w-[90%] mx-auto mt-5 bg-[#CDA0CB] h-[70%] rounded-2xl">
       <div className="flex items-center h-full">
         <button
           className="w-[5%] flex items-center justify-center"
@@ -104,6 +105,7 @@ export function Landing() {
       </div>
 
     </div>
+    </>
   );
 }
 

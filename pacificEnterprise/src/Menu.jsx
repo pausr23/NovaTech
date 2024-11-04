@@ -8,6 +8,7 @@ import useFetchData from './hooks/useFetchData.js';
 import useCategorySelection from './hooks/showCategorySelection.js';
 
 function Menu() {
+  
   const { dishes, categories } = useFetchData(
     'http://pacificenterprise-produccion.test/api/dishes/all',
     'http://pacificenterprise-produccion.test/api/categories'
@@ -52,7 +53,7 @@ return (
                     key={dish.id}
                     image={dish.image}
                     title={dish.title}
-                    price={dish.dish_price}
+                    price={dish.sale_price}
                     description={dish.description}
                   />
                 ))}

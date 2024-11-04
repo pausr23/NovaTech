@@ -4,7 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import useFetchEvents from '../hooks/useFetchEvents';
 import flechaback from "../assets/img/backto.png";
 import flechago from "../assets/img/goto.png";
-import "./EventCarousel.css"; // Asegúrate de crear este archivo para los estilos
+import "./EventCarousel.css";
 import Footer from './Footer';
 
 export function EventCarousel() {
@@ -48,7 +48,7 @@ export function EventCarousel() {
                                 <div key={event.id} className="carousel-item">
                                     <div className="shadow-md rounded-[2rem] overflow-hidden relative">
                                         <img
-                                            src={`http://pacificenterprise-produccion.test/storage/images/${event.image_path}`}
+                                            src={event.image_path}
                                             alt={event.title}
                                             className="w-full h-[80vh] object-cover"
                                         />

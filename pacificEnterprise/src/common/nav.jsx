@@ -7,15 +7,15 @@ import Menu from '../Menu';
 export function Nav() {
     return (
         <div>
-        <div className='ml-[4%] grid grid-cols-2 h-full '>
-            <div className='mt-[2%] grid  w-[35%] h-[20%] items-start '>
+        <div className='ml-[4%] grid grid-cols-2'>
+            <div className='mt-[2%] grid w-[35%] h-[20%] items-start '>
                 <div className='h-[20%] grid grid-cols-2 my-2'>
                     <img src={logo} alt="logo" className='w-full ' />
                     <ul className='flex flex-row font-bold gap-[2vw] text-base xxs:text-[0.55rem] md:text-[0.813rem] ml-auto my-auto '>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/menu">Menu</Link></li>
                         <li><Link to="/about-us">About</Link></li>  
-                        <li><Link to="/events">Event</Link></li>                      
+                        <li><Link to="/events">Events</Link></li>                      
                     </ul>
                 </div>
 
@@ -36,8 +36,7 @@ export function Nav() {
                 </div>
 
             </div>
-
-                <img className='w-full xxs:hidden ' src={hero} alt="hero img barco" />
+                <img className='w-[85%]  place-self-end xxs:hidden ' src={hero} alt="hero img barco" />
         </div>
 
        
