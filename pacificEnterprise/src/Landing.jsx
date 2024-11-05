@@ -55,7 +55,7 @@ export function Landing() {
 
   return (
     <>
-    <h1 className="text-center text-5xl font-bold">Some of our <span className="text-[#CDA0CB]">menu</span></h1>
+    <h1 className="text-center text-3xl lg:text-5xl font-bold">Some of our <span className="text-[#CDA0CB]">menu</span></h1>
     <div className="relative 2xl:w-[80%] xxs:w-[90%] mx-auto mt-5 bg-[#CDA0CB] h-[70%] rounded-2xl">
       <div className="flex items-center h-full">
         <button
