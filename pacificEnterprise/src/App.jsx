@@ -11,7 +11,7 @@ export function App() {
   return (
 
       <div >
-        <Router basename="/pacificEnterprise">
+        <Router>
           <Nav />
           <Routes>
             <Route path="/about-us" element={<AboutUs />} />
