@@ -1,6 +1,9 @@
+// Card.jsx
 import React from "react";
+import PropTypes from "prop-types";
 import "../index.css";
 
+// Define la función truncateDescription
 const truncateDescription = (description) => {
   const words = description.split(" ");
   return words.length > 12 ? words.slice(0, 12).join(" ") + "..." : description;
@@ -12,7 +15,7 @@ export function Card({ image, title, price, description }) {
       <div className="w-[50%] h-full flex justify-center items-center bg-white rounded-full overflow-hidden">
         <img
           className="w-full h-full object-contain"
-          src={image} 
+          src={image}
           alt={title}
         />
       </div>
@@ -24,5 +27,12 @@ export function Card({ image, title, price, description }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default Card;
