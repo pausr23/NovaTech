@@ -54,7 +54,9 @@ export function Landing() {
   }, []);
 
   return (
-    <div className="relative 2xl:w-[80%] xxs:w-[90%] mx-auto my-[3%] bg-[#CDA0CB] h-[70%] mb-10 rounded-2xl">
+    <>
+    <h1 className="text-center text-xl lg:text-5xl font-bold">Some of our <span className="text-[#CDA0CB]">menu</span></h1>
+    <div className="relative 2xl:w-[80%] xxs:w-[90%] mx-auto mt-5 bg-[#CDA0CB] h-[70%] rounded-2xl">
       <div className="flex items-center h-full">
         <button
           className="w-[5%] flex items-center justify-center"
@@ -76,7 +78,7 @@ export function Landing() {
         <div className="w-[80%] h-[50%] mx-auto">
           <Swiper {...swiperConfig} ref={swiperRef}>
             {randomImages.map((item, index) => (
-              <SwiperSlide key={item.id || index}> 
+              <SwiperSlide key={item.id || index}>
                 <LandingCards image={item.image} title={item.title} />
               </SwiperSlide>
             ))}
@@ -101,7 +103,9 @@ export function Landing() {
           />
         </button>
       </div>
+
     </div>
+    </>
   );
 }
 

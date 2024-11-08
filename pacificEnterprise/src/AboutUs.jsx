@@ -9,17 +9,11 @@ function AboutUs() {
         <h1 className='text-4xl font-bold text-white text-center p-4 mb-14 mt-14'>About Us</h1>
         
         <div className='flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 m-2'>
-          <img src='./src/assets/img/Rectangleferri.png' className='w-full max-w-sm lg:w-[591px] lg:h-[656.25px]' alt="Ferri" />
+          <img src='https://res.cloudinary.com/dm3gkx8t2/image/upload/v1730771347/Rectangleferri_ypcjuw.png' className='w-full max-w-sm lg:w-[591px] lg:h-[656.25px]' alt="Ferri" />
           <p className='text-white text-lg max-w-md leading-relaxed'>
-            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-            Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.
-            <span className='block mr-4'>
-             Cuando un impresor desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-            </span>
-              <span className='inline-block'>
-             Otro texto en el mismo nivel, con espaciado entre ambos.
-            </span>
- </p>
+          Welcome to Pacific Enterprise, a unique fast-food restaurant located at the heart of your ferry journey. We're here to make every trip a delicious and memorable experience. Our commitment is to provide our passengers with fresh, quick, and quality food, perfect for satisfying your appetite while you enjoy the sea view.
+          At Pacific Enterprise, we understand the importance of every moment during your trip. That’s why we’ve crafted a diverse and tasty menu with options for everyone, from our iconic burgers and fries to healthy and refreshing choices. We take pride in using fresh, high-quality ingredients to ensure that every bite is bursting with flavor.
+        </p>
         </div>
 
         <div className='flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 m-2 mt-6'>
@@ -40,7 +34,7 @@ function AboutUs() {
             </div>
             <p className='text-white text-lg mt-4'>Dentro del ferry Naviera <br /> Tambor IV</p>
           </div>
-          <img src='./src/assets/img/barco.png' className='w-full max-w-sm lg:w-[591px] lg:h-[656.25px]' alt="Barco" />
+          <img src='https://res.cloudinary.com/dm3gkx8t2/image/upload/v1730771348/barco_r6xd4j.png' className='w-full max-w-sm lg:w-[591px] lg:h-[656.25px]' alt="Barco" />
         </div>
       </div>
       <Footer />

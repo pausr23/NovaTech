@@ -6,7 +6,7 @@ export function Footer() {
         
         <div className='bg-[#323035] w-full h-auto py-10 mt-16'>
         <div className='flex justify-center p-6'>
-            <img src="./src/assets/img/logo.svg" alt="logo" className="w-42 h-auto" />
+            <img src="https://res.cloudinary.com/dm3gkx8t2/image/upload/v1730771362/logo_kdxrcq.svg" alt="logo" className="w-42 h-auto" />
         </div>
 
         <div className='flex flex-col md:flex-row justify-center items-center gap-8 mt-8 text-center'>
