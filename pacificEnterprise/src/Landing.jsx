@@ -36,7 +36,7 @@ export function Landing() {
 
     const fetchImages = async () => {
       try {
-        const response = await fetch("http://pacificenterprise-produccion.test/api/dishes/all");
+        const response = await fetch("https://admin.pacificenterprise.org/api/dishes/all");
         const data = await response.json();
 
         const filteredImages = data.filter(dish => [2, 3, 4].includes(dish.category_id));

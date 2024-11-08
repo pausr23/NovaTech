@@ -10,8 +10,8 @@ import useCategorySelection from './hooks/showCategorySelection.js';
 function Menu() {
   
   const { dishes, categories } = useFetchData(
-    'http://pacificenterprise-produccion.test/api/dishes/all',
-    'http://pacificenterprise-produccion.test/api/categories'
+    'https://admin.pacificenterprise.org/api/dishes/all',
+    'https://admin.pacificenterprise.org/api/categories'
   );
 
   const {
