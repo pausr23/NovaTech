@@ -1,6 +1,6 @@
 describe('Pruebas de Landing Page', () => {
   it('Botón Menu', () => {
-    cy.visit('http://localhost:5173/')
+    cy.visit('https://pacificenterprise.org')
     cy.wait(2000)
     cy.get('button').contains('Menu').click()
     cy.wait(2000)
@@ -8,18 +8,18 @@ describe('Pruebas de Landing Page', () => {
   })
 
   it('Pruebas de navbar', () => {
-    cy.visit('http://localhost:5173/')
+    cy.visit('https://pacificenterprise.org')
     cy.wait(2000)
     cy.get('li').contains('Menu').click()
     cy.wait(2000)
-    cy.get('li').contains('About us').click()
+    cy.get('li').contains('About').click()
     cy.wait(2000)
     cy.get('li').contains('Home').click()
     cy.wait(2000)
   })
 
   it('Pruebas de Carrusel', () => {
-    cy.visit('http://localhost:5173/')
+    cy.visit('https://pacificenterprise.org')
     cy.wait(2000)
 
     cy.get('img[alt="flecha go"]').click()
@@ -41,7 +41,7 @@ describe('Pruebas de Landing Page', () => {
     
 
     it('Pruebas de scroll', () => {
-      cy.visit('http://localhost:5173/about-us')
+      cy.visit('https://pacificenterprise.org/about-us')
       cy.wait(2000)  
       cy.get('div.grid-cols-2.h-full')
       .should('be.visible');
@@ -58,7 +58,7 @@ describe('Pruebas de Landing Page', () => {
     describe('Pruebas de Menu', () => {
 
       it('Scroll de menú', () => {
-        cy.visit('http://localhost:5173/menu')
+        cy.visit('https://pacificenterprise.org/menu')
         cy.wait(2000)
 
         cy.get('div.text-white h1')
