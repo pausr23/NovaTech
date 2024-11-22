@@ -6,13 +6,14 @@ function AboutUs() {
   return (
     <>
       <div className='bg-[#16161A] flex flex-col items-center p-4'>
-        <h1 className='text-4xl font-bold text-white text-center p-4 mb-14 mt-14'>About Us</h1>
+        <h1 className='text-4xl font-bold text-white text-center p-4 mb-14 mt-14'>¿Quienes Somos?</h1>
         
         <div className='flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 m-2'>
           <img src='https://res.cloudinary.com/dm3gkx8t2/image/upload/v1730771347/Rectangleferri_ypcjuw.png' className='w-full max-w-sm lg:w-[591px] lg:h-[656.25px]' alt="Ferri" />
           <p className='text-white text-lg max-w-md leading-relaxed'>
-          Welcome to Pacific Enterprise, a unique fast-food restaurant located at the heart of your ferry journey. We're here to make every trip a delicious and memorable experience. Our commitment is to provide our passengers with fresh, quick, and quality food, perfect for satisfying your appetite while you enjoy the sea view.
-          At Pacific Enterprise, we understand the importance of every moment during your trip. That’s why we’ve crafted a diverse and tasty menu with options for everyone, from our iconic burgers and fries to healthy and refreshing choices. We take pride in using fresh, high-quality ingredients to ensure that every bite is bursting with flavor.
+          Bienvenidos a Pacific Enterprise, un restaurante único de comida rápida ubicado en el corazón de tu viaje en ferry. Estamos aquí para hacer que cada trayecto sea una experiencia deliciosa e inolvidable. Nuestro compromiso es ofrecer a nuestros pasajeros comida fresca, rápida y de calidad, perfecta para satisfacer tu apetito mientras disfrutas de la vista al mar.
+
+En Pacific Enterprise entendemos la importancia de cada momento durante tu viaje. Por eso, hemos diseñado un menú variado y sabroso con opciones para todos, desde nuestras icónicas hamburguesas y papas fritas hasta alternativas saludables y refrescantes. Nos enorgullece usar ingredientes frescos y de alta calidad para garantizar que cada bocado esté lleno de sabor.
         </p>
         </div>
 
