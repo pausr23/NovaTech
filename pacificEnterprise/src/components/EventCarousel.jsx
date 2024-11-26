@@ -13,11 +13,9 @@ export function EventCarousel() {
     return (
         <div className='flex flex-col items-center'>
             <div>
-                <hr className='w-full h-[2px] bg-white mb-4' />
                 <h1 className='font-bold text-white text-4xl'>
-                    Events
+                    Eventos
                 </h1>
-                <hr className='w-full h-[2px] bg-white mt-4' />
             </div>
             <div className='flex w-[90vw] my-6 mx-auto'>
                 <div className="carousel-container">
