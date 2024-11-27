@@ -8,18 +8,18 @@ import "./EventCarousel.css";
 import Footer from './Footer';
 
 export function EventCarousel() {
-    const events = useFetchEvents('http://pacificenterprise-produccion.test/api/events');
+    const events = useFetchEvents('https://admin.pacificenterprise.org/api/events');
 
     return (
-        <div className='flex flex-col items-center'>
-            <div>
+        <div className='flex flex-col items-center  w-[80vw] mt-[15vh] mx-auto'>
+            <div className="flex flex-col w-[70vw] md:w-[50vw]  mx-auto">
                 <hr className='w-full h-[2px] bg-white mb-4' />
-                <h1 className='font-bold text-white text-4xl'>
-                    Events
+                <h1 className='font-bold text-white text-4xl mx-auto'>
+                    Eventos
                 </h1>
                 <hr className='w-full h-[2px] bg-white mt-4' />
             </div>
-            <div className='flex w-[90vw] my-6 mx-auto'>
+            <div className='flex w-full my6 mx-auto mt-[15vh]'>
                 <div className="carousel-container">
                     {events.length > 0 && (
                         <Carousel
@@ -64,7 +64,6 @@ export function EventCarousel() {
                     )}
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

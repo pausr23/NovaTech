@@ -17,8 +17,6 @@ export function App() {
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/" element={<Landing />} />
             <Route path="/menu" element={<Menu />}/>
-            <Route path="/events" element={<EventCarousel />} />
-
           </Routes>
         </Router>
       </div>
