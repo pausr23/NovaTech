@@ -97,7 +97,7 @@ export function Nav() {
                             <li>Viaje</li>
                         </ul>
 
-                    <button className=' my-[5vh] xxs:text-xl text-3xl bg-[#CDA0CB] py-[1vh] px-[5vw] rounded-[2vw]'><Link to="/menu">Menu</Link></button>
+                    <button className=' my-[5vh] xxs:text-xl text-3xl bg-[#CDA0CB] py-[1vh] px-[5vw] rounded-[2vw] font-bold'><Link to="/menu">Menú</Link></button>
 
                     </div>
 

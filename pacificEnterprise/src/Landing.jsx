@@ -10,6 +10,7 @@ import flechaback from "./assets/img/backto.png";
 import flechago from "./assets/img/goto.png";
 import { LandingCards } from "./components/LandingCards";
 import { EventCarousel } from "./components/EventCarousel";
+import Footer from './components/Footer.jsx';
 
 const getRandomImages = (images, count) => {
   const shuffled = images.sort(() => 0.5 - Math.random());
@@ -149,6 +150,7 @@ export function Landing() {
       </div>
 
       <EventCarousel />
+      <Footer />
     </>
   );
 }
