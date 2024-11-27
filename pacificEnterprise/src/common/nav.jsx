@@ -57,7 +57,7 @@ export function Nav() {
             <div className='mt-[3vh] flex flex-col items-center mb-[10vh] md:hidden'>
                 <ul className='flex flex-row gap-[5%] xxs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-7xl font-bold'>
                     <li>Sabores</li>
-                    <li className='text-[#CDA0CB]'>unicos</li>
+                    <li className='text-[#CDA0CB]'>únicos</li>
                 </ul>
 
                 <ul className='flex flex-row gap-[5%] xxs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-7xl font-bold'>
