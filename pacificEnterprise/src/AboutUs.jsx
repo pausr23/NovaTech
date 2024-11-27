@@ -6,7 +6,7 @@ function AboutUs() {
   return (
     <>
       <div className='bg-[#16161A] flex flex-col items-center p-4'>
-        <h1 className='text-4xl font-bold text-white text-center p-4 mb-14 mt-14'>¿Quienes Somos?</h1>
+        <h1 className='text-4xl font-bold text-white text-center p-4 mb-14 mt-14'>¿Quiénes somos?</h1>
         
         <div className='flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 m-2'>
           <img src='https://res.cloudinary.com/dm3gkx8t2/image/upload/v1730771347/Rectangleferri_ypcjuw.png' className='w-full max-w-sm lg:w-[591px] lg:h-[656.25px]' alt="Ferri" />

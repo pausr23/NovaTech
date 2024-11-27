@@ -23,7 +23,7 @@ function Menu() {
 
 return (
   <>
-    <h1 className='text-center text-5xl font-bold'>Menu</h1>
+    <h1 className='text-center text-5xl font-bold'>Menú</h1>
     <div className='mx-[5%] my-[4vh]'>
       <div className='flex justify-center mb-[8rem] gap-x-[1%]'>
         {categories.map(category => (
