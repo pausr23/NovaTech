@@ -11,7 +11,7 @@ const truncateDescription = (description) => {
 
 export function Card({ image, title, price, description }) {
   return (
-    <div className="bg-[#323035] text-white sm:w-[450px] w-[85vw] h-[200px] rounded-r-3xl rounded-l-[9rem] lg:mr-[4%] flex items-center flex-shrink-0">
+    <div className="bg-[#323035] text-white w-[75vw] md:w-[45vw] xl:w-full h-[200px] rounded-r-3xl rounded-l-[9rem] lg:mr-[4%] flex items-center flex-shrink-0">
       <div className="w-[60%] sm:w-[50%] h-full flex justify-center items-center bg-white rounded-full overflow-hidden">
         <img
           className="w-full h-full object-contain"

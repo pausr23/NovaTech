@@ -45,7 +45,7 @@ return (
               </h1>
               <hr className='w-[50%] h-[2px] bg-white mt-4' />
             </div>
-            <div className='flex overflow-x-scroll xl:overflow-visible gap-[1rem] w-[calc(100vw-10%)] xl:grid grid-rows-1 xl:grid-cols-3 lg:gap-[3rem] my-[5rem] xl:my-[10rem]'>
+            <div className='flex overflow-x-scroll xl:overflow-visible gap-[1rem] w-[calc(90vw-10%)] xl:grid grid-rows-1 xl:grid-cols-3 lg:gap-[3rem] my-[5rem] xl:my-[10rem] mx-auto'>
               {dishes
                 .filter(dish => dish.subcategory_id === subcategory.id)
                 .map(dish => (
